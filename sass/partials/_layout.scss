@@ -1,0 +1,49 @@
+@import "./colors";
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  background-color: $main-color;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: $third-color;
+
+  a {
+    text-decoration: none;
+    color: #ffff;
+  }
+}
+
+.article-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  .articles {
+    position: relative;
+    background-color: $third-color;
+    color: #ffff;
+    text-align: center;
+    width: 300px;
+  }
+}
+
+#filter {
+  display: flex;
+  align-items: center;
+  margin: 50px auto;
+  padding: 7px;
+}
