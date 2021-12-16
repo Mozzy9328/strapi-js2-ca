@@ -1,14 +1,16 @@
-import { theKey } from "../settings/theKey.js";
-
-export function saveToStorage(value) {
-  localStorage.setItem(theKey, JSON.stringify(value));
+export function saveToStorage(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
 }
 
-export function getFromStorage() {
-  const value = localStorage.getItem(theKey);
+export function getFromStorage(key) {
+  const value = localStorage.getItem(key);
 
   if (!value) {
     return [];
   }
   return JSON.parse(value);
+}
+
+export function clearStorage() {
+  localStorage.clear();
 }

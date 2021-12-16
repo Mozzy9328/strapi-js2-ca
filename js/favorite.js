@@ -1,8 +1,12 @@
-import { getFromStorage } from "./components/storage.js";
+// import { createHtml } from "./components/createHtml.js";
+import { getFromStorage, clearStorage } from "./components/storage.js";
+import { theKey } from "./settings/theKey.js";
 
-const favorites = getFromStorage();
-
+const favorites = getFromStorage(theKey);
 const articleContainer = document.querySelector(".article-container");
+const clearBtn = document.querySelector("#clear");
+
+articleContainer.innerHTML = "";
 
 favorites.forEach((favorites) => {
   articleContainer.innerHTML += `<div class="articles">
@@ -12,3 +16,13 @@ favorites.forEach((favorites) => {
                                     <p >#${favorites.id}</p>    
                                 </div>`;
 });
+
+clearBtn.addEventListener("click", function () {
+  clearStorage();
+  articleContainer.innerHTML = "There is no item";
+  window.location = "/";
+});
+
+if (articleContainer.innerText === "") {
+  articleContainer.innerHTML = "There is no item";
+}

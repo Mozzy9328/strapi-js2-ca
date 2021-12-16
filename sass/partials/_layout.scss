@@ -47,3 +47,10 @@ nav {
   margin: 50px auto;
   padding: 7px;
 }
+
+button {
+  &#clear {
+    display: flex;
+    margin: 20px auto;
+  }
+}

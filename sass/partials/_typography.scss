@@ -5,3 +5,10 @@ h1 {
 h2 {
   text-align: center;
 }
+
+h3,
+p {
+  max-width: 200px;
+  margin: 0 auto;
+  padding: 15px;
+}

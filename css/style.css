@@ -65,6 +65,13 @@ nav a {
   padding: 7px;
 }
 
+button#clear {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px auto;
+}
+
 h1 {
   font-size: 50px;
   text-align: center;
@@ -74,14 +81,18 @@ h2 {
   text-align: center;
 }
 
+h3,
+p {
+  max-width: 200px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
 .fa-heart {
   position: absolute;
   right: 10px;
   top: 10px;
   cursor: pointer;
-}
-
-.clicked {
-  color: red;
+  font-size: 20px;
 }
 /*# sourceMappingURL=style.css.map */
